@@ -1,8 +1,8 @@
 streamlit
 deepface
-# opencv-python
+opencv-python
 # opencv-python-headless
-opencv-python-headless==4.8.1.78
+# opencv-python-headless==4.8.1.78
 pandas
 numpy
 # tensorflow
