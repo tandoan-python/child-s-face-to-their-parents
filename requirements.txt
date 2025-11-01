@@ -2,7 +2,8 @@ streamlit
 pandas
 numpy
 Pillow
-deepface==0.0.91
+deepface==0.0.92
 opencv-python-headless
-tensorflow==2.9.1
-retina-face==0.0.14
+# Dùng TensorFlow 2.10.0, phiên bản cuối cùng hỗ trợ Python 3.10 chính thức
+tensorflow-cpu==2.10.0
+# Loại bỏ retina-face và tf-keras, để deepface và tensorflow-cpu tự xử lý
