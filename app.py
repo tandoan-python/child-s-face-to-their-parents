@@ -52,6 +52,8 @@ st.set_page_config(
 
 st.title("👨‍👩‍👧 Bố và mẹ, Ai là người bé giống hơn? - Analyzer")
 st.markdown("Ứng dụng so sánh khoảng cách khuôn mặt giữa Bé với Bố và Bé với Mẹ.")
+st.markdown("Lưu ý: Nên sử dụng ảnh chỉ có gương mặt thôi nhé! (Ảnh rõ nét, ánh sáng tốt sẽ cho kết quả chính xác hơn.) Bên dưới là ví dụ ảnh mẫu:")
+st.image("./images/sample.jpg")
 
 st.header("1. Tải lên Ảnh")
 
@@ -80,13 +82,13 @@ if uploaded_father and uploaded_child and uploaded_mother:
     
     with colA:
         st.subheader("Bố")
-        st.image(img_father_np, use_column_width=True)
+        st.image(img_father_np)
     with colB:
         st.subheader("Bé")
-        st.image(img_child_np, use_column_width=True)
+        st.image(img_child_np)
     with colC:
         st.subheader("Mẹ")
-        st.image(img_mother_np, use_column_width=True)
+        st.image(img_mother_np)
         
     st.markdown("---")
     
