@@ -5,5 +5,5 @@ deepface
 opencv-python-headless==4.8.1.78
 pandas
 numpy
-# tensorflow
-tensorflow==2.10.1
+tensorflow
+# tensorflow==2.10.1
