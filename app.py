@@ -50,8 +50,8 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-st.title("👨‍👩‍👧 Ai là người bé giống hơn? - DeepFace Analyzer")
-st.markdown("Sử dụng DeepFace để so sánh khoảng cách khuôn mặt giữa Bé với Bố và Bé với Mẹ.")
+st.title("👨‍👩‍👧 Bố và mẹ, Ai là người bé giống hơn? - Analyzer")
+st.markdown("Ứng dụng so sánh khoảng cách khuôn mặt giữa Bé với Bố và Bé với Mẹ.")
 
 st.header("1. Tải lên Ảnh")
 
