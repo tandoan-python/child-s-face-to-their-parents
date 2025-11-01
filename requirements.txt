@@ -1,4 +1,4 @@
-streamlit
+streamlit==1.27.0  # Cập nhật Streamlit để hỗ trợ hide_index
 pandas
 Pillow
 deepface==0.0.92
