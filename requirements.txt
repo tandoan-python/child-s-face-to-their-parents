@@ -6,12 +6,19 @@
 # tensorflow-cpu==2.10.0
 # numpy==1.23.5
 
-# Cố định phiên bản Streamlit MỚI NHẤT (giả sử 1.30.0 là ổn định)
-streamlit==1.30.0
-# Cố định phiên bản Pandas tương thích với Streamlit mới
-pandas==2.1.3 
-Pillow
+# Các gói quan trọng đã khắc phục lỗi Deep Learning:
 deepface==0.0.92
 opencv-python-headless
 tensorflow-cpu==2.10.0
 numpy==1.23.5
+
+# Các gói chính gây lỗi tương thích gần đây:
+streamlit==1.30.0
+pandas==2.1.3 
+
+# Các gói đơn giản cần thiết:
+Pillow
+
+# Thêm các gói con gây lỗi cài đặt (thường là phụ thuộc của streamlit/markdown-it-py):
+rich==13.7.1
+markdown-it-py==3.0.0
