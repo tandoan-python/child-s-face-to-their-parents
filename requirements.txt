@@ -2,7 +2,7 @@ streamlit
 pandas
 numpy
 Pillow
-deepface==0.0.91 
-# Sửa phiên bản TensorFlow để đảm bảo tương thích
-tensorflow==2.10.0
+deepface==0.0.91  
 opencv-python-headless
+tensorflow==2.16.1 
+tf-keras # Thêm gói này để đáp ứng yêu cầu của RetinaFace
