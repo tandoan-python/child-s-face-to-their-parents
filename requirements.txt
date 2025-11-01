@@ -6,19 +6,19 @@
 # tensorflow-cpu==2.10.0
 # numpy==1.23.5
 
-# Các gói Deep Learning/Computer Vision (đã cố định cho Python 3.10)
+# Các gói quan trọng đã khắc phục lỗi Deep Learning:
 deepface==0.0.92
 opencv-python-headless
 tensorflow-cpu==2.10.0
 numpy==1.23.5
 
-# Các gói chính (cố định để tránh xung đột phụ thuộc)
-streamlit==1.30.0
-pandas==2.1.3 
-Pillow
+# Cố định các gói chính để giải quyết xung đột Protobuf:
+streamlit==1.22.0
+pandas==1.3.5 
 
-# Cố định các gói phụ thuộc gây lỗi (như thấy trong log)
+# Giữ lại các gói phụ thuộc vì chúng gây lỗi cài đặt (Installer Error)
 rich==13.7.1
 markdown-it-py==3.0.0
 pygments==2.16.1
 mdurl==0.1.2
+Pillow
