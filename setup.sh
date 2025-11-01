@@ -1,18 +1,24 @@
 #!/bin/bash
 
-echo "Bắt đầu thiết lập hệ thống (Streamlit Cloud)..."
+Dọn dẹp bộ nhớ đệm và cập nhật hệ thống
+
+echo "Bắt đầu thiết lập hệ thống (OpenCV dependencies)..."
+sudo apt-get clean
 sudo apt-get update
 
-Cài đặt các thư viện hỗ trợ OpenCV và DeepFace:
+Các thư viện cơ bản cho DeepFace/NumPy/SciPy
 
-libgfortran5 và build-essential: Cần thiết cho các phép toán số học cấp cao (DeepFace/NumPy).
+echo "Cài đặt các thư viện toán học và biên dịch..."
+sudo apt-get install -y libgfortran5 build-essential
 
-libsm6, libxrender1, libfontconfig1, libice6: Các thư viện hiển thị và X-server cần thiết cho OpenCV hoạt động trong môi trường headless Linux.
+CÁC THƯ VIỆN CỐT LÕI CHO OPENCV (libsm6, libxrender1, libfontconfig1, libice6 đã được thêm ở lần trước)
 
-echo "Cài đặt các thư viện hỗ trợ cốt lõi (OpenCV, DeepFace)..."
-sudo apt-get install -y libgfortran5 build-essential libsm6 libxrender1 libfontconfig1 libice6
+Bổ sung các thư viện media/codec và giao diện (UI/X-server) để khắc phục lỗi ImportError.
 
-Tạo thư mục ẩn để lưu trữ các mô hình DeepFace (giảm thiểu lỗi quyền truy cập)
+echo "Cài đặt các thư viện media và UI cho OpenCV..."
+sudo apt-get install -y libsm6 libxrender1 libfontconfig1 libice6 libgtk2.0-dev libcanberra-gtk-module
+
+Tạo thư mục ẩn để lưu trữ các mô hình DeepFace
 
 echo "Kiểm tra và tạo thư mục ~/.deepface..."
 mkdir -p ~/.deepface
