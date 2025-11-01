@@ -2,5 +2,6 @@ streamlit
 pandas
 numpy
 Pillow
-deepface
+deepface==0.0.91
 opencv-python-headless
+tensorflow==2.16.1
