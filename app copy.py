@@ -27,22 +27,6 @@ def load_image_from_uploaded_file(uploaded_file):
         return image_np
     return None
 
-# 1. Định nghĩa một hàm helper (chỉ làm một lần)
-def display_dataframe_compat(df, **kwargs):
-    # Lấy phiên bản Streamlit hiện tại
-    import streamlit as st
-    from packaging import version
-    
-    # Giả sử tính năng hide_index có từ Streamlit 1.25.0
-    if version.parse(st.__version__) >= version.parse("1.25.0"):
-        st.dataframe(df, **kwargs)
-    else:
-        # Xóa tham số hide_index nếu phiên bản cũ hơn
-        if 'hide_index' in kwargs:
-            del kwargs['hide_index']
-        st.dataframe(df, **kwargs)
-
-
 # --- (Giao diện Tải lên Ảnh không đổi) ---
 st.set_page_config(
     page_title="Phân Tích Khuôn Mặt Bé Với Bố Mẹ (DeepFace)",
@@ -128,8 +112,7 @@ if uploaded_father and uploaded_child and uploaded_mother:
                 }
 
                 df_results = pd.DataFrame(results_data)
-                # st.dataframe(df_results, hide_index=True, use_container_width=True)
-                display_dataframe_compat(df_results, hide_index=True, use_container_width=True)
+                st.dataframe(df_results, hide_index=True, use_container_width=True)
 
                 st.markdown("---")
 
